@@ -1,0 +1,39 @@
+<header  class="index_menu">
+    <div class="menu">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-color-dblue py-0">
+            <a class="navbar-brand mr-5" href="index.html">Check & Verify</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto right-side-menu">    
+                    <div *ngFor = "let item of menuItemsArray;">
+                        <li class={{item.class1}}>
+                         <a *ngIf="item.isChild == 1"  class={{item.class2}} href="#" id="Menu_1" data-toggle="dropdown" aria-haspopup="true">{{item.title}}</a>
+                         <a *ngIf="item.isChild == 0"  class={{item.class2}} id="Menu_2" routerLink={{item.link}}>{{item.title}}</a>
+                         <div class="dropdown-menu" aria-labelledby="Menu_1">
+                             <li *ngFor = "let item1 of item.subItems;">
+                               <a class="dropdown-item" routerLink={{item1.link}}>{{item1.title}}</a>
+                             </li>
+                         </div>  
+                        </li>
+                </div>                
+                   </ul>
+                </div>
+                <div class="">
+                    <span class="text-white">Welcome back! <b>{{fullname}}</b></span>
+                    <ul class="navbar-nav justify-content-end"> 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Available
+                            </a>
+                            <div class="dropdown-menu head-right-menu" aria-labelledby="navbarDropdown">
+                                <!-- <a class="dropdown-item" href="#" (click)="ChangeStatus(1)">Available</a>
+                                <a class="dropdown-item" href="#" (click)="ChangeStatus(2)">Busy</a>
+                                <a class="dropdown-item" href="#" (click)="ChangeStatus(3)">Break</a> -->
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" (click)="ChangeStatus(0)">Logout</a>
+                               </div>
+                        </li>
+                    </ul> 
+                </div>
+            </nav>
+    </div>       
+    </header>
