@@ -12,7 +12,13 @@ export class Shared {
     LanguageId: number;
     UserList: any[];
     Roles: any[];
+    Missions: any[];
+    Country: any[];
+    VAC: any[];
     EditUserId: number;
     MissionsDict:Dictionary<string>= {};
-    ApiURL = "http://localhost:8433/api/";
+    LoginStatus: number;
+    StatusValue: string;
+    UserMenu: 20;
+    ApiURL = "http://localhost:8433/api/";//"https://cv2o.mioot.com:3001/api/";//
 }
