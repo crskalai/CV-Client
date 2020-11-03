@@ -1,0 +1,694 @@
+<div class="content">
+    <main>
+      <div class="main-content-section">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="side_nav">
+              <div class="click_arrow">
+                <button (click)="this.jsutility.toggleButton(this)" id="bt" class="fas fa-angle-right"></button>
+              </div>
+              <div class="col-md-12" id="hideDiv">
+                <div class="admin_sidebar">
+                  <div class="h5 vertical-scroll-title"></div>
+                  <div class="vertical-scroll p-2">
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:void(0)">
+                      <div class="row align-items-center case-left-col">
+                        <div class="col-md-8">
+                          <div class="d-block">
+                            <b>Bank Statement</b> - Verbal
+                          </div>
+                          <span>20 Jun @ 11.30 AM (2)</span>
+                        </div>
+                        <div class="col-md-4">
+                          In Progress
+                        </div>
+                      </div>
+                    </a>
+                    <div class="text-right py-3">
+                      <select name="select" id="select">
+                        <option>--- Add Check Types (3/3) ---</option>
+                        <option>Address Verification</option>
+                      </select>
+                    </div>
+                  </div>
+                </div><!-- admin sidebar end here -->
+              </div>
+            </div>
+            <div class="col ml-3" id="myDIVs">
+              <div class="bg_white">
+                <div class="h5 vertical-scroll-title"></div>
+                <div class="vertical-scroll p-2">
+                  <div class="case-right-col">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="details-tab" data-toggle="tab" href="#details" role="tab"
+                          aria-controls="details" aria-selected="true">Details</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info"
+                          aria-selected="false">Info</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="call-log-tab" data-toggle="tab" href="#call-log" role="tab"
+                          aria-controls="call-log" aria-selected="false">Call Log</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="documents-tab" data-toggle="tab" href="#documents" role="tab"
+                          aria-controls="documents" aria-selected="false">Documents</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="uploads-tab" data-toggle="tab" href="#uploads" role="tab"
+                          aria-controls="uploads" aria-selected="false">Uploads</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="screenshots-tab" data-toggle="tab" href="#screenshots" role="tab"
+                          aria-controls="screenshots" aria-selected="false">Screenshots</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="activity-tab" data-toggle="tab" href="#activity" role="tab"
+                          aria-controls="activity" aria-selected="false">Activity</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="results-tab" data-toggle="tab" href="#results" role="tab"
+                          aria-controls="results" aria-selected="false">Results</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content py-3" id="myTabContent">
+                      <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+                        <div class="col-md-8">
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Applicant Name
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Gilbert Samson
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              GWF Number
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              GWF415234123
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Creation Date
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              16 Jan 2019 11.30 AM
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Application Date
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              16 Jan 2019 11.30 AM
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Visa Category
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Business Visa
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Location
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Chennai
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              TAT
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              18 Jan 2019 5.30 PM
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Status
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Assigned
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Agent Name
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Gilbert Samson
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="info" role="tabpanel" aria-labelledby="info-tab">
+                        <div class="col-md-12">
+                          <div class="row details-content">
+                            <div class="col-md-4 details-left-col">
+                              Orginisation Name
+                            </div>
+                            <div class="col-md-8 details-right-col">
+                              Gilbert Samson
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-4 details-left-col">
+                              Comments
+                            </div>
+                            <div class="col-md-8 details-right-col">
+                              --
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-4 details-left-col">
+                              Target Url
+                            </div>
+                            <div class="col-md-8 details-right-col">
+                              http:///www,mypassport.gov.in
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-4 details-left-col">
+                              Attachments
+                            </div>
+                            <div class="col-md-8 details-right-col">
+                              Phone Number screesn - neesoft.com.jpg
+                              Verified Screesn - verified page1.jpg
+                              Verified Screesn - verified page2.jpg
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-4 details-left-col">
+                              Verified URL
+                            </div>
+                            <div class="col-md-8 details-right-col">
+                              http:///www,mypassport.gov.in/reports/pan/121312121212.html
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-4 details-left-col">
+                              Select bank
+                            </div>
+                            <div class="col-md-8 details-right-col">
+                              <select name="select2" id="select2" class="form-control w-auto">
+                                <option>Bank 1</option>
+                                <option>Bank 2</option>
+                                <option>Bank 3</option>
+                                <option>Bank 4</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-4 details-left-col">
+                              Pan Number
+                            </div>
+                            <div class="col-md-8 details-right-col">
+                              <form class="form-inline">
+                                <div class="form-group">
+                                  <input type="text" class="form-control" id="pannumber">
+                                </div>
+                                <button type="submit" class="btn btn-secondary ml-2">Initiate</button>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-4 details-left-col">
+                              API Documents Status
+                            </div>
+                            <div class="col-md-8 details-right-col">
+                              Pending - <a href="#">Downloaded</a>
+                            </div>
+                          </div>
+                          <div class="row my-3 details-table">
+                            <div class="col-md-12 p-0">
+                              <table class="table table-bordered table-sm">
+                                <thead class="thead-light">
+                                  <tr>
+                                    <th>Contact Name</th>
+                                    <th>Phone</th>
+                                    <th>Attempts</th>
+                                    <th>Last Call</th>
+                                    <th>Call Status</th>
+                                    <th>Next Call</th>
+                                    <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>Gilbert Samson</td>
+                                    <td>9840173003</td>
+                                    <td>1</td>
+                                    <td><span class="date">12 June 2019</span> <span class="time">10.30 AM</span></td>
+                                    <td>Connected</td>
+                                    <td><span class="date">12 June 2019</span> <span class="time">10.30 AM</span></td>
+                                    <td>img</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Gobal Samy</td>
+                                    <td>9840332735</td>
+                                    <td>0</td>
+                                    <td>--</td>
+                                    <td>-</td>
+                                    <td></td>
+                                    <td>img</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="call-log" role="tabpanel" aria-labelledby="call-log-tab">
+                        <div class="table-responsive-sm horizontal-scroll vertical-scroll" #tb1>
+                          <table class="table table-bordered">
+                            <thead class="thead-light">
+                              <tr>
+                                <th>Attempt </th>
+                                <th>Call</th>
+                                <th>Agent </th>
+                                <th>Conatct Person</th>
+                                <th>Dialed Number</th>
+                                <th>Start Time</th>
+                                <th>Duration</th>
+                                <th>Play</th>
+                                <th>Call Status</th>
+                                <th>Spoken To</th>
+                                <th>Action</th>
+                                <th>Comments</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td rowspan="3">1</td>
+                                <td>1</td>
+                                <td>Gilber Samson</td>
+                                <td>Nerendra Mod</td>
+                                <td>012345+12332</td>
+                                <td>12:30 AM</td>
+                                <td>00:15:20</td>
+                                <td>@</td>
+                                <td>No Response</td>
+                                <td>&nbsp;</td>
+                                <td>Auto Resheduled<br>
+                                  12 June 2018 - 11.30 AM<br></td>
+                                <td>View</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>Gilber Samson</td>
+                                <td>Nerendra Mod</td>
+                                <td>012345+12332</td>
+                                <td>12:30 AM</td>
+                                <td>00:15:20</td>
+                                <td>@</td>
+                                <td>No Response</td>
+                                <td>&nbsp;</td>
+                                <td>Reshedued</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>Gilber Samson</td>
+                                <td>Nerendra Mod</td>
+                                <td>012345+12332</td>
+                                <td>12:30 AM</td>
+                                <td>00:15:20</td>
+                                <td>@</td>
+                                <td>No Response</td>
+                                <td>&nbsp;</td>
+                                <td>Auto Resheduled</td>
+                                <td>View</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>Partha Sarathi</td>
+                                <td>Nerendra Mod</td>
+                                <td>012345+12332</td>
+                                <td>12:30 AM</td>
+                                <td>00:15:20</td>
+                                <td>@</td>
+                                <td>No Response</td>
+                                <td>&nbsp;</td>
+                                <td>Reshedued</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+                        <div class="col-md-12">
+                          <a href="#"><img src="images/scanned_copy.jpg"> </a>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="uploads" role="tabpanel" aria-labelledby="uploads-tab">
+                        <div class="col-md-8">
+                          <div class="row details-content">
+                            <div class="col-md-5 details-left-col">
+                              File Description
+                            </div>
+                            <div class="col-md-7 details-right-col">
+                              Gilbert Samson
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-5 details-left-col">
+                              File Type
+                            </div>
+                            <div class="col-md-7 details-right-col">
+                              <select name="select2" id="select2" class="form-control">
+                                <option>-- Select ---</option>
+                                <option>Contact Evidence</option>
+                                <option>Check Type Evidence</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-5 details-left-col">
+                              Upload Files
+                            </div>
+                            <div class="col-md-7 details-right-col">
+                              <div class="input-group">
+                                <div class="custom-file">
+                                  <input type="file" class="custom-file-input" id="inputGroupFile04"
+                                    aria-describedby="inputGroupFileAddon04">
+                                  <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                </div>
+                                <div class="input-group-append">
+                                  <button class="btn btn-secondary" type="button"
+                                    id="inputGroupFileAddon04">Upload</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row my-3">
+                            <div class="col-md-12 p-0">
+                              <div class="h6"> Uploaded Documents</div>
+                              <span class="d-block">Verification Proof - myfile.pdf</span>
+                              <span class="d-block">Sample Prodff - mytype.xls</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="screenshots" role="tabpanel" aria-labelledby="screenshots-tab">
+                        <div class="col-md-12">
+                          <div class="row details-content">
+                            <div class="col-md-5 details-left-col">
+                              File Description
+                            </div>
+                            <div class="col-md-7 details-right-col">
+                              <input type="text" class="form-control">
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-5 details-left-col">
+                              File Type
+                            </div>
+                            <div class="col-md-7 details-right-col">
+                              <select name="select2" id="select2" class="form-control">
+                                <option>-- Select ---</option>
+                                <option>Contact Evidence</option>
+                                <option>Check Type Evidence</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-12 details-left-col">
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-12 details-left-col">
+                              <button type="button" class="btn btn-secondary">Save Screens</button>
+                              <button type="reset" class="btn btn-outline-secondary">Clear</button>
+                            </div>
+                          </div>
+                          <div class="row my-4">
+                            <div class="col-md-12">
+                              <div class="h6">Schreenshots</div>
+                              <div class="details-screenshot pb-3">
+                                <span class="d-block">Image Description - File Name - Delete - Popput</span>
+                                <img src="images/mailbox10jan.jpg" class="img-fluid">
+                              </div>
+                              <div class="details-screenshot pb-3">
+                                <span class="d-block">Sample Prodff - mytype.xls</span>
+                                <img src="images/splitup.jpg" class="img-fluid">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="activity" role="tabpanel" aria-labelledby="activity-tab">
+                        <div class="col-md-8">
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Applicant Name
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Gilbert Samson
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              GWF Number
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              GWF415234123
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Creation Date
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              16 Jan 2019 11.30 AM
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Application Date
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              16 Jan 2019 11.30 AM
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Visa Category
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Business Visa
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Location
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Chennai
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              TAT
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              18 Jan 2019 5.30 PM
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Status
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Assigned
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-6 details-left-col">
+                              Agent Name
+                            </div>
+                            <div class="col-md-6 details-right-col">
+                              Gilbert Samson
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="results" role="tabpanel" aria-labelledby="results-tab">
+                        <div class="col-md-8">
+                          <div class="row details-content">
+                            <div class="col-md-12 details-left-col">
+                              1 . What is your Name ?
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-12 details-right-col">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="option1">
+                                <label class="form-check-label">Kalaimani</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="option2">
+                                <label class="form-check-label">Mani</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Mani</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-12 details-left-col">
+                              2. Your Education Qualification?
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-12 details-right-col">
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="option1">
+                                <label class="form-check-label">Kalaimani</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="option2">
+                                <label class="form-check-label">Mani</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Mani</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row details-content">
+                            <div class="col-md-12 details-left-col">
+                              <input class="btn btn-secondary" type="submit" value="Submit">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><!-- bg white end here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
