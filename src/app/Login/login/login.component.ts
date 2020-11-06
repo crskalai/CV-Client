@@ -191,6 +191,7 @@ if(alljObj.Response == 0)
   this.shared.Missions = alljObj.Mission;
   this.shared.Country = alljObj.Country;
   this.shared.VAC = alljObj.VAC;
+  this.shared.Visa = alljObj.Visa;
   // this.shared.PartnerId = alljObj.All.pId;
   // this.shared.LanguageId = alljObj.All.lId;
   // this.shared.FullName = alljObj.All.firstName + " " + alljObj.All.lastName;
