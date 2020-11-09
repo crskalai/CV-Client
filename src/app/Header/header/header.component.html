@@ -3,9 +3,8 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-color-dblue py-0">
             <a class="navbar-brand mr-5" href="index.html">Check & Verify</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto right-side-menu">    
-                    <div *ngFor = "let item of menuItemsArray;">
-                        <li class={{item.class1}}>
+                <ul class="navbar-nav mr-auto right-side-menu"> 
+                        <li class={{item.class1}} *ngFor = "let item of menuItemsArray;">
                          <a *ngIf="item.isChild == 1"  class={{item.class2}} href="#" id="Menu_1" data-toggle="dropdown" aria-haspopup="true">{{item.title}}</a>
                          <a *ngIf="item.isChild == 0"  class={{item.class2}} id="Menu_2" routerLink={{item.link}}>{{item.title}}</a>
                          <div class="dropdown-menu" aria-labelledby="Menu_1">
@@ -13,8 +12,7 @@
                                <a class="dropdown-item" routerLink={{item1.link}}>{{item1.title}}</a>
                              </li>
                          </div>  
-                        </li>
-                </div>                
+                        </li>       
                    </ul>
                 </div>
                 <div class="">

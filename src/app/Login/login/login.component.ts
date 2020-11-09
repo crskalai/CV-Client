@@ -30,9 +30,12 @@ export class LoginComponent implements OnInit {
   isChangePass = 0;
   ipAddress:string;  
   public userId = 0;
+  isDisabled: boolean;
   constructor(public translate:TranslateService,private router: Router, private apiService: ApiCallService, private EncrDecr: EncrDecrService, private shared: Shared) { }
 
   ngOnInit() {
+    this.isDisabled = false;
+    this.ClearValues();
     this.getIP();
     // var data = "Object {\"mission_id\":1,\"partner_id\":1,\"mission_name\":\"UK\"}";
     // var allList = JSON.stringify(data);
@@ -42,6 +45,15 @@ export class LoginComponent implements OnInit {
     // this.api.mission_name = alljObj.mission_name;
     // console.log(this.api);
   }
+  ClearValues()
+  {
+    this.partnercode = "";
+    this.username = "";
+    this.password = "";
+    //this.oldpassword = "";
+    this.newpassword = "";
+    this.confirmpassword = "";
+  }
   getIP()  
   {  
     this.apiService.getIPAddress().subscribe((res:any)=>{  
@@ -50,7 +62,29 @@ export class LoginComponent implements OnInit {
   } 
   onSubmit1()
   {
-    this.router.navigate(['/managestring']);
+    this.username = "admin";
+    this.password = "zxc";
+    this.partnercode = "A2233";
+
+    let str = "{\"user_name\":\""+ this.username +"\",\"password\":\""+ this.password + "\",\"partnerCode\":\"" + this.partnercode + "\",\"ipAdd\":\""+ this.ipAddress+ "\"}";
+      //var msg = this.EncrDecr.set('8080808080808080',str);
+      var ciphertext = CryptoJS.AES.encrypt(str, '8080808080808080').toString();
+      let url = this.shared.ApiURL + "login";
+      let msg = "{\"Request\":\"" + encodeURIComponent(ciphertext) + "\"}";
+      this.apiService.get(url, msg).subscribe(data => {
+        console.log(data);
+        // var jData = JSON.stringify(data);
+        // console.log(jData);
+        const allList = JSON.stringify(data);
+        var alljObj = JSON.parse(allList);
+        console.log(alljObj);
+         var allData = CryptoJS.AES.decrypt(alljObj.Response, '8080808080808080').toString(CryptoJS.enc.Utf8);  
+         console.log(allData);
+
+        //const allList = JSON.stringify(allData);
+        //var alljObj = JSON.parse(allList);
+        //console.log(allList);
+      });
   }
   onChangePassword()
   {
@@ -119,34 +153,51 @@ export class LoginComponent implements OnInit {
       flag = 0;
     }
     if(flag == 0)
-    {
-       //let url = "http://localhost:8433/operatorconsole/login";
-      let url = this.shared.ApiURL + "login";
-      var ciphertext = CryptoJS.AES.encrypt(this.password, '8080808080808080').toString();
-      // var msg = this.EncrDecr.set('8080808080808080',this.password);
-      console.log(ciphertext);
+    {  
       let str = "{\"user_name\":\""+ this.username +"\",\"password\":\""+ this.password + "\",\"partnerCode\":\"" + this.partnercode + "\",\"ipAdd\":\""+ this.ipAddress+ "\"}";
-      this.apiService.get(url, str).subscribe(data => {
-      console.log(data);
+      var ciphertext = CryptoJS.AES.encrypt(str, '8080808080808080').toString();
+      let url = this.shared.ApiURL + "login";
+      let msg = "{\"Request\":\"" + encodeURIComponent(ciphertext) + "\"}";
+      this.apiService.get(url, msg).subscribe(data => {
+      //console.log(data);
 
-//this.shared.MenuObj = data;
-const allList = JSON.stringify(data);
-//console.log(allList);
-var alljObj = JSON.parse(allList);
-//var allDataList = <any>JSON.parse(alljObj);
-
+// //this.shared.MenuObj = data;
+// alert("rvs");
+// var allData = CryptoJS.AES.decrypt(data, '8080808080808080').toString(CryptoJS.enc.Utf8);  
+// const allList = JSON.stringify(data);
+// //console.log(allList);
+// var alljObj = JSON.parse(allList);
+// //var allDataList = <any>JSON.parse(alljObj);
+        const allList = JSON.stringify(data);
+        var allData = JSON.parse(allList);
+        //console.log(allData);
+         var alljObj1 = CryptoJS.AES.decrypt(allData.Response, '8080808080808080').toString(CryptoJS.enc.Utf8);  
+         var alljObj = JSON.parse(alljObj1);
+         console.log(alljObj.All);
 
 
 var missionsDict:Dictionary<string>= {};
-
+alert(alljObj.Response);
 if(alljObj.Response == 0)
 { 
+  this.isDisabled = false;
   this.shared.PartnerId = alljObj.All.pId;
   this.shared.LanguageId = alljObj.All.lId;
   this.shared.FullName = alljObj.All.firstName + " " + alljObj.All.lastName;
   this.shared.SessionToken = alljObj.SessionToken;
   this.shared.SessionId = alljObj.SessionId;
   this.shared.MenuObj = alljObj.Menu;
+  this.shared.Roles = alljObj.Roles;
+  this.shared.Missions = alljObj.Mission;
+  this.shared.Country = alljObj.Country;
+  this.shared.VAC = alljObj.VAC;
+  this.shared.Visa = alljObj.Visa;
+  // this.shared.PartnerId = alljObj.All.pId;
+  // this.shared.LanguageId = alljObj.All.lId;
+  // this.shared.FullName = alljObj.All.firstName + " " + alljObj.All.lastName;
+  // this.shared.SessionToken = alljObj.SessionToken;
+  // this.shared.SessionId = alljObj.SessionId;
+  // this.shared.MenuObj = alljObj.Menu;
   //this.api = alljObj.Mission;
 for(var i=0;i<alljObj.Mission.length;i++)
 {
