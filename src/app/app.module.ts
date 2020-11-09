@@ -9,10 +9,13 @@ import { HeaderComponent } from './Header/header/header.component';
 import { LoginComponent } from './Login/login/login.component';
 import { Shared } from './Models/common-data';
 import { EncrDecrService } from './Services/encr-decr.service';
-import { CaseComponent } from './case/case.component';
+
 import{TranslateModule,TranslateLoader} from '@ngx-translate/core';
 import{TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { transition } from '@angular/animations';
+import { CaseListComponent } from './case/case-list/case-list.component';
+import { CaseDetailComponent } from './case/case-detail/case-detail.component';
+import {UtilityJqueryService } from './utility/utility-jquery.service';
 export function HttploaderFactory(http:HttpClient){
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');//TranslateHttpLoader(http);
 }
@@ -23,7 +26,8 @@ export function HttploaderFactory(http:HttpClient){
     AppComponent,
     HeaderComponent,
     LoginComponent,
-    CaseComponent    
+    CaseListComponent,
+    CaseDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,7 @@ export function HttploaderFactory(http:HttpClient){
       }
     })
   ],
-  providers: [EncrDecrService,Shared],
+  providers: [EncrDecrService,Shared,UtilityJqueryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

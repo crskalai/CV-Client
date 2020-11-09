@@ -12,11 +12,12 @@
                 <div class="admin_sidebar">
                   <div class="h5 vertical-scroll-title"></div>
                   <div class="vertical-scroll p-2">
-                    <a href="javascript:void(0)">
+
+                    <a href="javascript:void(0)" *ngFor="let item of ListItems">
                       <div class="row align-items-center case-left-col">
                         <div class="col-md-8">
                           <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
+                            <b>{{item.applicant_name}}</b> - Verbal
                           </div>
                           <span>20 Jun @ 11.30 AM (2)</span>
                         </div>
@@ -25,110 +26,7 @@
                         </div>
                       </div>
                     </a>
-                    <a href="javascript:void(0)">
-                      <div class="row align-items-center case-left-col">
-                        <div class="col-md-8">
-                          <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
-                          </div>
-                          <span>20 Jun @ 11.30 AM (2)</span>
-                        </div>
-                        <div class="col-md-4">
-                          In Progress
-                        </div>
-                      </div>
-                    </a>
-                    <a href="javascript:void(0)">
-                      <div class="row align-items-center case-left-col">
-                        <div class="col-md-8">
-                          <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
-                          </div>
-                          <span>20 Jun @ 11.30 AM (2)</span>
-                        </div>
-                        <div class="col-md-4">
-                          In Progress
-                        </div>
-                      </div>
-                    </a>
-                    <a href="javascript:void(0)">
-                      <div class="row align-items-center case-left-col">
-                        <div class="col-md-8">
-                          <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
-                          </div>
-                          <span>20 Jun @ 11.30 AM (2)</span>
-                        </div>
-                        <div class="col-md-4">
-                          In Progress
-                        </div>
-                      </div>
-                    </a>
-                    <a href="javascript:void(0)">
-                      <div class="row align-items-center case-left-col">
-                        <div class="col-md-8">
-                          <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
-                          </div>
-                          <span>20 Jun @ 11.30 AM (2)</span>
-                        </div>
-                        <div class="col-md-4">
-                          In Progress
-                        </div>
-                      </div>
-                    </a>
-                    <a href="javascript:void(0)">
-                      <div class="row align-items-center case-left-col">
-                        <div class="col-md-8">
-                          <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
-                          </div>
-                          <span>20 Jun @ 11.30 AM (2)</span>
-                        </div>
-                        <div class="col-md-4">
-                          In Progress
-                        </div>
-                      </div>
-                    </a>
-                    <a href="javascript:void(0)">
-                      <div class="row align-items-center case-left-col">
-                        <div class="col-md-8">
-                          <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
-                          </div>
-                          <span>20 Jun @ 11.30 AM (2)</span>
-                        </div>
-                        <div class="col-md-4">
-                          In Progress
-                        </div>
-                      </div>
-                    </a>
-                    <a href="javascript:void(0)">
-                      <div class="row align-items-center case-left-col">
-                        <div class="col-md-8">
-                          <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
-                          </div>
-                          <span>20 Jun @ 11.30 AM (2)</span>
-                        </div>
-                        <div class="col-md-4">
-                          In Progress
-                        </div>
-                      </div>
-                    </a>
-                    <a href="javascript:void(0)">
-                      <div class="row align-items-center case-left-col">
-                        <div class="col-md-8">
-                          <div class="d-block">
-                            <b>Bank Statement</b> - Verbal
-                          </div>
-                          <span>20 Jun @ 11.30 AM (2)</span>
-                        </div>
-                        <div class="col-md-4">
-                          In Progress
-                        </div>
-                      </div>
-                    </a>
+
                     <div class="text-right py-3">
                       <select name="select" id="select">
                         <option>--- Add Check Types (3/3) ---</option>
