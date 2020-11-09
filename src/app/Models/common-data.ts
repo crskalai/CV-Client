@@ -11,7 +11,9 @@ export class Shared {
     PartnerId: number;
     LanguageId: number;
     UserList: any[];
+    Visa: any[];
     Roles: any[];
+    CheckType: any[];
     Missions: any[];
     Country: any[];
     VAC: any[];
