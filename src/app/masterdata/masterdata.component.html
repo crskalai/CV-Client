@@ -1,0 +1,101 @@
+<div class="content p-1">
+    <main>
+<div class="main-content-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+            <form novalidate [formGroup] ="bioSection" (ngSubmit) = "onSubmit()">
+          <div  class="h4 vertical-scroll-title">{{'lbl_userName' | translate}}</div>
+          <div class="vertical-scroll">
+          <table class="table">
+            <thead>
+              
+         </thead>
+         <tbody>
+            <ng-container *ngFor = "let item of pro_Visacategoryarray; let i = index;">
+            <tr>
+                <td>{{ i + 1}}</td>
+                <td>{{ item.visa_category_name}}</td> 
+                <td> <img src="../../assets/images/delete.png" alt="delete" style="height:15px;cursor: pointer;" (click)="deleteBook(item.visa_category_id)"></td>
+               
+            </tr>
+            </ng-container>
+         </tbody>
+          </table>
+          <div class="add-more text-right py-2 pr-2">
+            
+            <table class="misssiontbl table">
+              
+            <tbody>
+                <tr>
+                   <td><input type="text"  formControlName="visa_category_name" class="form-control input-sm" placeholder="Visa Type" [ngClass]="{ 'is-invalid': visacategorysubmitted && f.visa_category_name.errors }" trim="blur">
+                       <!--    <input type="text"  [value]="bioSection.get('visa_category_name').value | safeHtml" formControlName="visa_category_name" class="form-control input-sm" placeholder="Visa Type" [ngClass]="{ 'is-invalid': visacategorysubmitted && f.visa_category_name.errors }" trim="blur"> -->
+                        <div *ngIf="visacategorysubmitted && f.visa_category_name.errors" class="invalid-feedback">
+                            <div *ngIf="f.visa_category_name.errors.required">Visacategory Name is required</div>
+                           
+                        </div>
+                       
+                        <div *ngIf = "f.visa_category_name.errors && f.visa_category_name.errors['exists']" style="color:red;">visa category exists already!</div> </td>
+                        <td>  <button type="submit" class="btn btn-success" [disabled]="disableButton">Add</button> </td>
+                        
+                </tr>
+                
+            </tbody>
+            <input type="hidden" formControlName="visa_category_id">
+            <input type="hidden" formControlName="mission_id">
+    </table>
+          
+</div> 
+</div> </form>
+       
+      </div>
+        <div class="col-md-3">
+          <div  class="h4 vertical-scroll-title">Check Type</div>
+          <div class="vertical-scroll">
+          <table class="table">
+            <thead>
+              
+         </thead>
+         <tbody>
+            <ng-container *ngFor = "let item of pro_checktypearray; let i = index;">
+            <tr>
+                <td>{{ i + 1}}</td>
+                <td>{{ item.check_type_name}}</td> 
+                <td><img src="../../assets/images/delete.png" alt="delete" style="height:15px;cursor: pointer;" (click)="deletechecktype(item.check_type_id)"></td>
+               
+            </tr>
+            </ng-container>
+         </tbody>
+          </table>
+          <div class="add-more text-right py-2 pr-2">
+            <form novalidate [formGroup] ="ChecktypeSection" (ngSubmit) = "AddChecktype_Sumbit()">
+            <table class="misssiontbl table">
+          
+            <tbody>
+                <tr>
+                    <td> <input type="text" formControlName="check_type_name" class="form-control input-sm" placeholder="Check Type" [ngClass]="{ 'is-invalid': ChecktypeSubmitted && C.check_type_name.errors }" trim="blur">
+                        <div *ngIf="ChecktypeSubmitted && C.check_type_name.errors" class="invalid-feedback">
+                            <div *ngIf="C.check_type_name.errors.required">Check type Name is required</div>
+                        </div> 
+                        <div *ngIf = "C.check_type_name.errors && C.check_type_name.errors['exists']" style="color:red;">checktype name exists already!</div>
+                    </td>
+                        <td> <button type="submit" class="btn btn-success"  [disabled]="disableButton_checktype" >Add</button> </td>
+                        
+                </tr>
+                
+            </tbody>
+            <input type="hidden" formControlName="check_type_id">
+            <input type="hidden" formControlName="mission_id">
+    </table></form>
+</div>
+</div>
+        </div>
+        <div class="col-md-3">
+          <div  class="h4 vertical-scroll-title">Mode</div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
