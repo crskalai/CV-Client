@@ -26,9 +26,12 @@
     "jquery": "^3.5.1",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "ngx-trim-directive": "^1.0.11",
 =======
 >>>>>>> refs/remotes/origin/main
+=======
+>>>>>>> 033815aa62027b3fce36e6534d700ffd3c3be452
 =======
 >>>>>>> 033815aa62027b3fce36e6534d700ffd3c3be452
     "rxjs": "~6.6.0",
