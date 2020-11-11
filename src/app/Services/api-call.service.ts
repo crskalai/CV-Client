@@ -24,6 +24,10 @@ export class ApiCallService {
     let params = new HttpParams().set("params", strParams);
     return this.http.get(url, {params});
   }
+  getNew(url: string, params: HttpParams)
+  {
+    return this.http.get(url, {params:params});
+  }
   post(url: string,strParams: string): Observable<any>
   {
     let params = url + '?params=' + strParams;

@@ -1,0 +1,64 @@
+<div class="content p-1">
+    <main>
+        <div class="main-content-section">
+            <div class="container-fluid custom_container_top">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="bg_white">
+                            <div class="vertical-scroll-title table-search-filter py-3">
+                                <form>
+                                    <div class="row m-0 px-2">
+                                        <div class="col">                                            
+                                            <input type="text" name="searchText" class="fc-size form-control" placeholder="Search" [(ngModel)] = "searchText" (change)="searchText=searchText.trim()">						 
+                                       </div>
+                                         <div class="col">                                            
+                                             <input  [ngStyle]="{'border-color':emptyMsg == 1 ? 'red' : '#ccc' }" type="text" name="stringCode" class="fc-size form-control" placeholder="String Code" [(ngModel)] = "stringCode" (change)="stringCode=stringCode.trim()">						 
+                                        </div>
+                                        <div class="col">
+                                             <input  [ngStyle]="{'border-color':emptyMsg == 2 ? 'red' : '#ccc' }" type="text" name="stringName" class="fc-size form-control" placeholder="String Name" [(ngModel)] = "stringName" (change)="stringName=stringName.trim()">						 
+                                        </div> 
+                                        <!-- <div class="col">
+                                             <select [(ngModel)]="ddlGroup" class="fc-size form-control" (change)="onChangeGroup($event.target.value)"> 
+                                                
+                                                <option value="0">--- Select Group ---</option>
+                                                <option value="1">Common</option>
+                                                <option value="2">Menu</option>
+                                                <option value="3">Mission</option>
+                                                <option value="4">Country</option>
+                                                <option value="5">VAC</option>
+                                                <option value="6">Role</option>
+                                                <option value="7">Language</option>
+                                                <option value="8">Status</option>
+                                            </select>
+                                        </div>                                         -->
+                                        
+                                        <button *ngIf="isAdd == 1" class="btn btn-primary" (click) = "AddString()">{{'btn_go' | translate}}</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="table-responsive horizontal-scroll vertical-scroll px-2 p1_border custom_padding">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>{{'lbl_string_code' | translate}}</th>
+                                            <th>{{'lbl_string_name' | translate }}</th>
+                                        </tr>                                       
+                                    </thead>
+                                    <tbody>
+                                         <tr *ngFor = "let item of stringList | SearchString: searchText ; let i = index;">
+                                            <td>{{ i + 1}}</td>
+                                            <td>{{ item.string_code}}</td>
+                                            <td>{{ item.string_name}}</td>                                            
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+</div> 

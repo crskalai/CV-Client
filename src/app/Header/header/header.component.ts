@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { Shared } from '../../Models/common-data';
 import { ApiCallService } from '../../Services/api-call.service';
 import { EncrDecrService } from '../../Services/encr-decr.service';
@@ -10,6 +10,9 @@ import { Router } from "@angular/router";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+  contentHeight: number;
+  headerHeight: number;
   public menuItemsArray: any[] = [];
   menuList : any;
   menu_id: Number;
@@ -25,6 +28,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.MenuDetails();
   }
+
+  
+
   MenuDetails()
   {
     for(let i=0;i<this.menuList.length;i++)

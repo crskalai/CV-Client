@@ -49,16 +49,16 @@
 .tab-content{
 	overflow: auto;
 }
-.right-side-menu.navbar-nav > li.nav-item.dropdown .dropdown-menu .dropdown-item{
+.right-side-menu.navbar-nav > div.li.nav-item.dropdown .dropdown-menu .dropdown-item{
 	line-height: 1.5;
 	position: initial;
 }
-.right-side-menu.navbar-nav > li.nav-item{
+.right-side-menu.navbar-nav > div.li.nav-item{
 	line-height: 50px;
 	margin-right: 1px;
 	background-color: rgb(9, 104, 140);
 }
-.right-side-menu.navbar-nav > li.nav-item a{
+.right-side-menu.navbar-nav > div.li.nav-item a{
 	position: relative;
 	bottom: -15px
 }

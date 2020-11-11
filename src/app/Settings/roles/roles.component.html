@@ -1,0 +1,114 @@
+<div class="content p-1">
+    <main>
+        <div class="main-content-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="bg_white">
+                            <div class="h4 vertical-scroll-title">Roles</div>
+                            <div class="table-responsive horizontal-scroll vertical-scroll px-2">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Access</th>
+                                            <!-- <th scope="col">Sub Role</th> -->
+                                            <th scope="col">Assigned Cases</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of Roles; let i = index;">
+                                          <td>{{i+1}}</td>    
+                                          <td>{{item.string_name}}</td>                                 
+                                          <td>{{ReqAcc[item.required_access]}}</td>
+                                          <td>{{AssCase[item.assign_cases]}}</td>                                          
+                                          <td>
+                                            <img src="assets/images/edit.gif" class="ptr">&nbsp;
+                                            <img src="assets/images/delete.gif" class="ptr"> 
+                                          </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <input type="text" class="fc-size form-control"/>
+                                        </td>
+                                        <td>
+                                            <select class="fc-size form-control">
+                                                <option value="0">---Access Role---</option>
+                                                <option value="1">All</option>
+                                                <option value="2">Mission/Country</option>
+                                                <option value="3">Mission/Country/VAC</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="fc-size form-control">
+                                                <option value="0">---Role---</option>
+                                                <option *ngFor="let role of Roles" value= {{role.role_id}}>
+                                                    {{role.string_name}}
+                                                </option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="fc-size form-control">
+                                                <option value="-1">---Assigned Cases---</option>
+                                                <option value="1">Yes</option>
+                                                <option value="0">No</option>
+                                            </select>
+                                        </td>
+                                        <td><input type="button" class="btn btn-primary" value="Add" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div><!-- bg white end here -->
+                    </div>
+                    <div class="col-md-4">
+                        <div class="bg_white">
+                            <div class="h4 vertical-scroll-title">Permissions</div>
+                            <ul class="list-group list-group-flush vertical-scroll country_list">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Module Name</th>
+                                            <th>View</th>
+                                            <th>Add</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th> 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor = "let item of Modules; let i = index" >
+                                            <td>{{ i + 1}}</td>
+                                            <td>{{ item.string_name}}</td>
+                                            <td>
+                                                <input type="checkbox"  name="is_view{{ item.menu_id }}" id="is_view" value="{{item.is_view}}" [(ngModel)] = "item.is_view" />
+                                            </td>
+                                            <td>
+                                                <input type="checkbox"  name="is_add{{ item.menu_id }}" id="is_add" value="{{item.is_add}}" [(ngModel)] = "item.is_add" />
+                                            </td>
+                                            <td>
+                                                <input type="checkbox"  name="is_edit{{ item.menu_id }}" id="is_edit" value="{{item.is_edit}}" [(ngModel)] = "item.is_edit" />
+                                            </td>
+                                            <td>
+                                                <input type="checkbox"  name="is_delete{{ item.menu_id }}" id="is_delete" value="{{item.is_delete}}" [(ngModel)] = "item.is_delete" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table">
+                                    <tr>
+                                        <td><button  class="btn btn-primary">Update</button></td>
+                                    </tr>
+                                </table>
+                            </ul>
+                        </div><!-- bg white end here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

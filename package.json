@@ -24,7 +24,10 @@
     "@schematics/angular": "^10.2.0",
     "crypto-js": "^4.0.0",
     "jquery": "^3.5.1",
+<<<<<<< HEAD
     "ngx-trim-directive": "^1.0.11",
+=======
+>>>>>>> refs/remotes/origin/main
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
